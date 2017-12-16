@@ -1,0 +1,39 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.markdown</title>
+      </head>
+      <body>
+        <h1 id="element-onscreen-visibility">Element Onscreen Visibility</h1>
+<p>This is a <a href="http://jquery.com/">jQuery</a> plugin which allows us to quickly check if an element 
+is within the browsers <a href="http://www.quirksmode.org/mobile/viewports.html">visual viewport</a>, 
+regardless of the scroll position. If a user can see this element, the function will return true.</p>
+<h2 id="documentation">Documentation</h2>
+<h3 id="basic-visibility-check">Basic visibility check</h3>
+<p>This basic check will return <code>true</code> if the entire element is visible to the user (within the visual viewport).</p>
+<pre><code>$(&#39;#element&#39;).visible();
+</code></pre><p>If you&#39;d like to check for ANY PART of the element, you can use the following:</p>
+<pre><code>$(&#39;#element&#39;).visible( true );
+</code></pre><p>The plugin ignores the elements visibility by default. E.g., <code>display:none</code>, <code>visibility: hidden</code>, <code>offsetWidth</code> or <code>offsetHeight</code> is 0). 
+To filter on css visibility, you can use the jQuery <code>:visible</code> selector:</p>
+<pre><code>$(&#39;#element:visible&#39;).visible();
+</code></pre><p>Optionally, you can specify a second parameter to the <code>.visible</code> plugin, which will check whether the element is visible, as well as
+whether it&#39;s within the viewport too.</p>
+<pre><code>$(&#39;#element:visible&#39;).visible( false, true );
+</code></pre><p>Optionally, you can add a third parameter to specify the direction to check for visibility. This can either be &#39;horizontal&#39;, &#39;vertical&#39; or &#39;both&#39;.
+Default is to &#39;both&#39;.</p>
+<pre><code>$(&#39;#element&#39;).visible( false, false, &#39;horizontal&#39; );
+</code></pre><h2 id="demos">Demos</h2>
+<p>The Demos for this plugin live under the examples/ directory. Open them directly in your web browser, or view the following online examples:</p>
+<ul>
+<li><a href="http://opensource.teamdf.com/visible/examples/demo-basic.html">Basic Demo</a></li>
+</ul>
+<p>See the blog article:</p>
+<ul>
+<li><a href="https://www.customd.com/articles/13/checking-if-an-element-is-visible-on-screen-using-jquery">Checking if an element is visible on-screen using jQuery</a></li>
+</ul>
+<h2 id="limitations">Limitations</h2>
+<p>Currently, this plugin will not check for visibility in nested scrollable areas, only on the main viewport (window object).</p>
+
+      </body>
+    </html>

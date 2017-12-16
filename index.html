@@ -2,19 +2,591 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>My Website</title>
-	<style>
-		main {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
-	</style>
+	<title>ETQ</title>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<meta name="" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	<header>	
+		<figure class="background"></figure>
+		<span class="logoHeader">e t q .</span>
+	</header>
 	<main>
-		<h1>MY COOL WEBSITE!!!</h1>
+		<figure class="overlay" id="overlay">
+			<button class="overlayBtn toggleMenu">X</button>
+		</figure>
+		<nav>
+			<div class="menu toggleMenu">
+				<div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<span class="floatMenu">menu</span>
+			</div>
+			<span class="logo">e t q .</span>
+			<div class="bagOpen">
+				<div>
+					<span class="itemQnt">0</span>
+				</div>
+				<span class="floatBag">bag</span>
+			</div>
+		</nav>
+		<div class="extraFilters">
+			<div class="price">
+				<h3>Price</h3>
+				<ul>
+					<li data-filter="all">No Filters</li>
+					<li data-filter="highPr">Above $275.00</li>
+					<li data-filter="medPr">Above $250.00</li>
+					<li data-filter="lowPr">Above $225.00</li>
+				</ul>
+			</div>
+			<div id="hideFilters">
+				<span>close</span>
+			</div>
+		</div>
+		<div class="filters">
+			<ul>
+				<li id="filter1">
+					<span><i class="fa fa-square" aria-hidden="true"></i></span>
+					<span><i class="fa fa-square" aria-hidden="true"></i></span>
+				</li>
+				<li id="filter2">
+					<span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+					<span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+				</li>
+				<li id="filter3">
+					<a href="#"><i class="fa fa-th" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-th" aria-hidden="true"></i></a>
+				</li>
+			</ul>
+			<div id="filters">
+				<a href="#">Filter</a>
+				<a href="#">Filter</a>
+			</div>
+		</div>
+		<aside class="navMenu fixed">
+			<h3>Menu</h3>
+			<ul>
+				<li>Collection</li>
+				<li>Lookbook</li>
+				<li>About</li>
+				<li>Stocklist</li>
+			</ul>
+			<ul>
+				<li>Customer Care</li>
+				<li>Login</li>
+			</ul>
+			<footer>
+				<div><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+				<div><a href="#"><i class="fa fa-camera-retro" aria-hidden="true"></i></a></div>
+				<div><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+			</footer>
+		</aside>
+		<aside class="navBag fixed">
+			<!-- <div class="newItem">
+				<span id="itemName">Name</span>
+				<span id="itemPrice">price</span>
+			</div> -->
+			<div class="bagClose">
+				<div>
+					<span class="itemQnt">0</span>
+				</div>
+				<span class="floatClose">close</span>
+			</div>
+			<span id="emptyBag">Empty Bag</span>
+			<div class="total">
+				<span>Total</span>
+				<span id="bagTotal">$0.00</span>
+			</div>
+			<footer>
+				<span>Checkout</span>
+			</footer>
+		</aside>
+		<section class="catalog">
+			<div class="product highPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$300.00</span>
+					<h3>Low 5</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product lowPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 4</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$250.00</span>
+					<h3>Low 4</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 3</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product1.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 3</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product highPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 1</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$325.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product highPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 2</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$300.00</span>
+					<h3>Low 2</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product highPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 6</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product1.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$375.00</span>
+					<h3>Low 6</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product lowPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 7</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$250.00</span>
+					<h3>Low 7</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product1.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product lowPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$250.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product1.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product highPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$300.00</span>
+					<h3>Low 5</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product lowPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 4</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$250.00</span>
+					<h3>Low 4</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 3</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product1.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 3</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product highPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 1</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$325.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product highPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 2</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product1.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$300.00</span>
+					<h3>Low 2</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product highPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 6</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$375.00</span>
+					<h3>Low 6</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 7</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 7</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product lowPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$250.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product1.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product lowPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product2.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$250.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product medPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$275.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+			<div class="product lowPr">
+				<a href="#">
+					<div class="tags">					
+						<span>Low 5</span>
+						<span>White</span>
+					</div>
+				</a>
+				<img src="assets/product1.PNG" alt="">
+				<div class="productDetails">
+					<span class="itemPrice">$250.00</span>
+					<h3>Low 1</h3>
+					<h4>White</h4>
+					<p>The one it all started with. The Low 1 features a clean and sophisticated look in a white ton-sur-ton colorway, bound to match every outfit you wear. This essential model is crafted from calf Nappa leather with matching white eyelets and a flat white rubber cup sole unit. Full calf leather lining and insole provide support and comfort and make this shoe your go to pair for years. Every pair comes in a branded box with an extra set of waxed laces.</p>
+					<div>
+						<span>Size</span>
+						<a href="#" class="bagOpen">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="legalFooter">
+			<div class="inner">
+				<p>ETQ Amsterdam BV</p>
+				<div class="address">
+					<span>Singel 459</span>
+					<span>1012 WP Amsterdam</span>
+					<span>The Netherlands</span>
+				</div>
+				<a href="#">service@etq-amsterdam.com</a>
+				<a href="#">+31 202 615 614</a>
+				<ul class="social">
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-camera-retro" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</footer>
 	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery-visible-master/jquery.visible.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.2/flickity.pkgd.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
